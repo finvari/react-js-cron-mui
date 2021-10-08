@@ -5,6 +5,7 @@ import CustomSelect from '../components/CustomSelect'
 import { DEFAULT_LOCALE_EN } from '../locale'
 import { classNames } from '../utils'
 import { UNITS } from '../constants'
+import { Typography } from '@material-ui/core'
 
 export default function WeekDays(props: WeekDaysProps) {
   const {
@@ -62,9 +63,9 @@ export default function WeekDays(props: WeekDaysProps) {
     <div className={internalClassName}>
       {locale.prefixWeekDays !== '' &&
         (period === 'week' || !monthDaysIsDisplayed) && (
-          <span>
+          <Typography>
             {locale.prefixWeekDays || DEFAULT_LOCALE_EN.prefixWeekDays}
-          </span>
+          </Typography>
         )}
 
       {locale.prefixWeekDaysForMonthAndYearPeriod !== '' &&
